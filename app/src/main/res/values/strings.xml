@@ -1,0 +1,14 @@
+<resources>
+    <string name="global.menu.action.logout">Log Out</string>
+
+    <string name="app_name">Mis Recetas</string>
+    <string name="login_activity.msg.login_error">Unable to login %s</string>
+    <string name="login_activity.msg.login_cancel">Login canceled</string>
+    <string name="recipe_main_activity.msg.error_getting_recipe">Can\'t get information %s</string>
+    <string name="recipe_main_activity.msg.saved">Successfully saved</string>
+
+    <string name="recipe_main_menu.action.liked_recipes">Liked recipes</string>
+    <string name="recipe_list_menu.action.main">Choose recipe</string>
+
+
+</resources>

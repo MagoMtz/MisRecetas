@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".recipemain.ui.view.RecipeMainActivity">
+
+    <ImageView
+        android:id="@+id/iv_recipe_img"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_recipe_activity.main_image_height"
+        android:layout_marginTop="32dp"
+        tools:src="@mipmap/ic_launcher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ly_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_recipe_img">
+
+        <ImageButton
+            android:id="@+id/btn_dislike"
+            android:layout_width="@dimen/main_recipe_activity.main_button"
+            android:layout_height="@dimen/main_recipe_activity.main_button"
+            android:layout_margin="@dimen/main_element_margin"
+            android:src="@android:drawable/ic_delete"
+            android:background="@color/colorAccent"
+            android:tint="@android:color/white"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_like"
+            android:layout_width="@dimen/main_recipe_activity.main_button"
+            android:layout_height="@dimen/main_recipe_activity.main_button"
+            android:layout_margin="@dimen/main_element_margin"
+            android:src="@android:drawable/btn_star_big_on"
+            android:background="@color/colorPrimaryDark"
+            android:tint="@android:color/white"
+            />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyleLarge"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
+</layout>

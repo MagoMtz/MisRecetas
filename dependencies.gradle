@@ -1,0 +1,74 @@
+ext {
+    //versions
+    compileSdkV = 28
+    minSdkV = 19
+    targetSdkV = 28
+    codeV = 1
+    nameV = "1.0"
+    supportV = '28.0.0'
+    constraintLyV = '1.1.3'
+    junitV = '4.12'
+    testRunnerV = '1.0.2'
+    espressoV = '3.0.2'
+    gsonV = '2.8.5'
+    retrofitV = '2.4.0'
+    logginInterceptorV = '3.8.0'
+    roomV = '1.1.1'
+    eventBusV = '3.1.1'
+    facebookV = '[4,5)'
+    daggerV = '2.0.1'
+    glideV = '4.8.0'
+
+    //packages
+    androidSupportP = 'com.android.support'
+    junitP = 'junit'
+    androidSupportTestP = 'com.android.support.test'
+    gsonP = 'com.google.code.gson'
+    retrofitP = 'com.squareup.retrofit2'
+    okHttp3P = 'com.squareup.okhttp3'
+    roomP = 'android.arch.persistence.room'
+    greenRobotP = 'org.greenrobot'
+    facebookP = 'com.facebook.android'
+    daggerP = 'com.google.dagger'
+    glideP = 'com.github.bumptech.glide'
+
+    supportDependencies = [
+            appCompat : buildDependency(androidSupportP, 'appcompat-v7', supportV),
+            constraintLy : buildDependency(androidSupportP+".constraint", 'constraint-layout', constraintLyV),
+            design : buildDependency(androidSupportP, 'design', supportV)
+    ]
+
+    testDependencies = [
+            junit : buildDependency(junitP, 'junit', junitV),
+            runner : buildDependency(androidSupportTestP, 'runner', testRunnerV),
+            espresso : buildDependency(androidSupportTestP+'.espresso', 'espresso-core', espressoV)
+    ]
+
+    appDependencies = [
+            gson : buildDependency(gsonP, 'gson', gsonV),
+            retrofit : buildDependency(retrofitP, 'retrofit', retrofitV),
+            retrofitGSONConverter : buildDependency(retrofitP, 'converter-gson', retrofitV),
+            logginInterceptor : buildDependency(okHttp3P, 'logging-interceptor', logginInterceptorV),
+            eventBus : buildDependency(greenRobotP, 'eventbus', eventBusV),
+            facebook : buildDependency(facebookP, 'facebook-android-sdk', facebookV),
+            glide : buildDependency(glideP, 'glide', glideV),
+            glideCompiler : buildDependency(glideP, 'compiler', glideV)
+    ]
+
+    daggerDependencies = [
+            dagger : buildDependency(daggerP, 'dagger', daggerV),
+            daggerCompiler : buildDependency(daggerP, 'dagger-compiler', daggerV),
+            daggerProcesor : buildDependency('org.glassfish', 'javax.annotation', '10.0-b28')
+    ]
+
+    roomDependencies = [
+            runtime : buildDependency(roomP, 'runtime', roomV),
+            roomRx : buildDependency(roomP, 'rxjava2', roomV),
+            compiler : buildDependency(roomP, 'compiler', roomV)
+    ]
+
+}
+
+static String buildDependency(String pack, String dependency, String version) {
+    return "${pack}:${dependency}:$version"
+}
