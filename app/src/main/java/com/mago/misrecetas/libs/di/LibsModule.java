@@ -1,14 +1,11 @@
 package com.mago.misrecetas.libs.di;
 
 import android.app.Activity;
-import android.app.Application;
-import android.support.v4.app.Fragment;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
 import com.mago.misrecetas.api.APIServiceRetrofit;
 import com.mago.misrecetas.api.RetrofitClient;
-import com.mago.misrecetas.db.RecipesDataBase;
 import com.mago.misrecetas.libs.GlideImageLoader;
 import com.mago.misrecetas.libs.GreenRobotEventBus;
 import com.mago.misrecetas.libs.base.EventBus;

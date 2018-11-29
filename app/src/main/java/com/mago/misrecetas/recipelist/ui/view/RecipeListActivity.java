@@ -10,22 +10,15 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-import com.bumptech.glide.Glide;
 import com.mago.misrecetas.MisRecetasApp;
 import com.mago.misrecetas.R;
 import com.mago.misrecetas.databinding.ActivityRecipeListBinding;
 import com.mago.misrecetas.entities.Recipe;
-import com.mago.misrecetas.libs.GlideImageLoader;
-import com.mago.misrecetas.libs.base.ImageLoader;
 import com.mago.misrecetas.recipelist.adapter.OnItemClickListener;
 import com.mago.misrecetas.recipelist.adapter.RecipesListAdapter;
 import com.mago.misrecetas.recipelist.di.RecipeListComponent;
-import com.mago.misrecetas.recipelist.events.RecipeListEvent;
 import com.mago.misrecetas.recipelist.ui.presenter.RecipeListPresenter;
 import com.mago.misrecetas.recipemain.ui.view.RecipeMainActivity;
-
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public class RecipeListActivity extends AppCompatActivity implements RecipeListView, OnItemClickListener {

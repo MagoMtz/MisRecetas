@@ -8,8 +8,11 @@ ext {
     supportV = '28.0.0'
     constraintLyV = '1.1.3'
     junitV = '4.12'
+    androidxTestV = '1.0.0'
     testRunnerV = '1.0.2'
     espressoV = '3.0.2'
+    robolectricV = '4.0.2'
+    mockitoV = '2.+'
     gsonV = '2.8.5'
     retrofitV = '2.4.0'
     logginInterceptorV = '3.8.0'
@@ -19,10 +22,14 @@ ext {
     daggerV = '2.0.1'
     glideV = '4.8.0'
 
+
     //packages
     androidSupportP = 'com.android.support'
     junitP = 'junit'
     androidSupportTestP = 'com.android.support.test'
+    androidxTestP = 'androidx.test'
+    robolectricP = 'org.robolectric'
+    mockitoP = 'org.mockito'
     gsonP = 'com.google.code.gson'
     retrofitP = 'com.squareup.retrofit2'
     okHttp3P = 'com.squareup.okhttp3'
@@ -40,8 +47,11 @@ ext {
 
     testDependencies = [
             junit : buildDependency(junitP, 'junit', junitV),
+            androidxTest : buildDependency(androidxTestP, 'core', androidxTestV),
             runner : buildDependency(androidSupportTestP, 'runner', testRunnerV),
-            espresso : buildDependency(androidSupportTestP+'.espresso', 'espresso-core', espressoV)
+            espresso : buildDependency(androidSupportTestP+'.espresso', 'espresso-core', espressoV),
+            robolectric : buildDependency(robolectricP, 'robolectric', robolectricV),
+            mockito : buildDependency(mockitoP, 'mockito-core', mockitoV)
     ]
 
     appDependencies = [

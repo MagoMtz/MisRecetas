@@ -2,13 +2,11 @@ package com.mago.misrecetas.recipelist.ui.repository;
 
 import android.app.Activity;
 
-import com.mago.misrecetas.R;
 import com.mago.misrecetas.db.RecipesDataBase;
 import com.mago.misrecetas.entities.Recipe;
 import com.mago.misrecetas.libs.base.EventBus;
 import com.mago.misrecetas.recipelist.events.RecipeListEvent;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;

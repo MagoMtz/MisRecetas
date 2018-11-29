@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion compileSdkV
+    testOptions.unitTests.includeAndroidResources = true
     defaultConfig {
         applicationId "com.mago.misrecetas"
         minSdkVersion minSdkV
@@ -65,4 +66,7 @@ dependencies {
     testImplementation testDependencies.junit
     androidTestImplementation testDependencies.runner
     androidTestImplementation testDependencies.espresso
+    testImplementation testDependencies.androidxTest
+    testImplementation testDependencies.mockito
+    testImplementation testDependencies.robolectric
 }

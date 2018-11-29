@@ -15,8 +15,8 @@ import org.greenrobot.eventbus.Subscribe;
 public class RecipeMainPresenterImpl implements RecipeMainPresenter {
     private EventBus eventBus;
     private RecipeMainView view;
-    SaveRecipeInteractor saveRecipeInteractor;
-    GetNextRecipeInteractor getNextRecipeInteractor;
+    private SaveRecipeInteractor saveRecipeInteractor;
+    private GetNextRecipeInteractor getNextRecipeInteractor;
 
     public RecipeMainPresenterImpl(EventBus eventBus, RecipeMainView view, SaveRecipeInteractor saveRecipeInteractor, GetNextRecipeInteractor getNextRecipeInteractor) {
         this.eventBus = eventBus;

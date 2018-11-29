@@ -1,7 +1,6 @@
 package com.mago.misrecetas;
 
 import android.app.Application;
-import android.content.Context;
 import android.content.Intent;
 
 import com.facebook.login.LoginManager;

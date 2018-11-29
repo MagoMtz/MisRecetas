@@ -1,11 +1,8 @@
 package com.mago.misrecetas.recipemain.di;
 
 import android.app.Activity;
-import android.app.Application;
-import android.content.Context;
 
 import com.mago.misrecetas.api.APIServiceRetrofit;
-import com.mago.misrecetas.db.RecipesDataBase;
 import com.mago.misrecetas.libs.base.EventBus;
 import com.mago.misrecetas.recipemain.ui.interactor.GetNextRecipeInteractor;
 import com.mago.misrecetas.recipemain.ui.interactor.GetNextRecipeInteractorImpl;
@@ -63,11 +60,4 @@ public class RecipeMainModule {
         return new RecipeMainRepositoryImpl(eventBus, service, activity);
     }
 
-    /*
-    @Provides
-    @Singleton
-    APIServiceRetrofit providesApiServiceRetrofit() {
-        return new RetrofitClient().getRecipeService();
-    }
-     */
 }

@@ -1,7 +1,6 @@
 package com.mago.misrecetas.recipelist.di;
 
 import android.app.Activity;
-import android.content.Context;
 
 import com.mago.misrecetas.entities.Recipe;
 import com.mago.misrecetas.libs.base.EventBus;
@@ -31,8 +30,8 @@ import dagger.Provides;
  */
 @Module
 public class RecipeListModule {
-    RecipeListView view;
-    OnItemClickListener clickListener;
+    private RecipeListView view;
+    private OnItemClickListener clickListener;
 
     public RecipeListModule(RecipeListView view, OnItemClickListener clickListener) {
         this.view = view;
